@@ -1,0 +1,28 @@
+{
+  "menuItems": [
+    {
+      "text": {
+        "title": "Spring Rolls",
+        "description": "TODO",
+        "price": "$19.99"
+      },
+      "image": "spring-rolls.jpg"
+    },
+    {
+      "text": {
+        "title": "Pho",
+        "description": "TODO",
+        "price": "$29.99"
+      },
+      "image": "spring-rolls.jpg"
+    },
+    {
+      "text": {
+        "title": "Banh Mi",
+        "description": "TODO",
+        "price": "$25.99"
+      },
+      "image": "spring-rolls.jpg"
+    }
+  ]
+}

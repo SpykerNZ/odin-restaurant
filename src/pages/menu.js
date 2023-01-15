@@ -1,19 +1,45 @@
 export default function createMenuPage() {
   const menuElems = document.createElement("div");
-  menuElems.classList.add("home");
+  menuElems.classList.add("menu");
 
-  const containerElem = document.createElement("div");
-
+  // Add Title Elem
   const titleElem = document.createElement("p");
-  titleElem.textContent = "MENU";
+  titleElem.textContent = "Menu";
   titleElem.classList.add("title");
-  containerElem.append(titleElem);
+  menuElems.append(titleElem);
 
-  const subtitleElem = document.createElement("p");
-  subtitleElem.textContent = "Vietnamse Cusine Brought to Life";
-  subtitleElem.classList.add("subtitle");
-  containerElem.append(subtitleElem);
+  // Add Menu Items
+  const menuItemsElem = document.createElement("div");
+  const jsonMenuData = require("../data/menu.json");
+  const menuImages = importAll(
+    require.context("../images", false, /\.(png|jpe?g|svg)$/)
+  );
 
-  menuElems.append(containerElem);
+  jsonMenuData.menuItems.forEach((item) => {
+    const menuItemElem = document.createElement("div");
+
+    for (let key in item.text) {
+      const elem = document.createElement("p");
+      elem.classList.add(key);
+      elem.textContent = item.text[key];
+      menuItemElem.append(elem);
+    }
+
+    const imageElem = document.createElement("img");
+    imageElem.src = menuImages[item.image];
+    menuItemElem.append(imageElem);
+    menuItemsElem.append(menuItemElem);
+  });
+
+  console.log();
+  menuElems.append(menuItemsElem);
   return menuElems;
+}
+
+function importAll(r) {
+  let images = {};
+  r.keys().map((item, index) => {
+    images[item.replace("./", "")] = r(item);
+  });
+  return images;
 }
