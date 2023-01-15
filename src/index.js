@@ -1,10 +1,29 @@
-import createHeader from "./components/header";
-import createHomePage from "./pages/home";
+import createHeader, {
+  bindContactButton,
+  bindHomeButton,
+  bindMenuButton,
+} from "./components/header";
+import createContent, { setContent } from "./components/content";
 import createFooter from "./components/footer";
+import createHomePage from "./pages/home";
+import createContactPage from "./pages/contact";
+import createMenuPage from "./pages/menu";
 import "./styles/styles.scss";
 
-const content = document.querySelector("div.container");
+const container = document.querySelector("div.container");
 
-createHeader(content);
-createHomePage(content);
-createFooter(content);
+const headerElems = createHeader();
+const contentElems = createContent();
+const footerElems = createFooter();
+
+const homePage = createHomePage();
+const menuPage = createMenuPage();
+const contactPage = createContactPage();
+
+bindHomeButton(headerElems, () => setContent(contentElems, homePage));
+bindMenuButton(headerElems, () => setContent(contentElems, menuPage));
+bindContactButton(headerElems, () => setContent(contentElems, contactPage));
+
+container.append(headerElems);
+container.append(contentElems);
+container.append(footerElems);

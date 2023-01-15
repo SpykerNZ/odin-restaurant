@@ -1,4 +1,4 @@
-export default function createFooter(parentElement) {
+export default function createFooter() {
   const footerElem = document.createElement("div");
   footerElem.classList.add("footer");
 
@@ -6,5 +6,5 @@ export default function createFooter(parentElement) {
   textElem.textContent = "Created by Jamie Spyker - The Odin Project 2023";
 
   footerElem.append(textElem);
-  parentElement.append(footerElem);
+  return footerElem;
 }

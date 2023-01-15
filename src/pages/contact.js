@@ -1,11 +1,11 @@
-export default function createHomePage() {
-  const homeElems = document.createElement("div");
-  homeElems.classList.add("home");
+export default function createContactPage() {
+  const contactElems = document.createElement("div");
+  contactElems.classList.add("home");
 
   const containerElem = document.createElement("div");
 
   const titleElem = document.createElement("p");
-  titleElem.textContent = "Quynh's Kitchen";
+  titleElem.textContent = "CONTACT";
   titleElem.classList.add("title");
   containerElem.append(titleElem);
 
@@ -14,6 +14,6 @@ export default function createHomePage() {
   subtitleElem.classList.add("subtitle");
   containerElem.append(subtitleElem);
 
-  homeElems.append(containerElem);
-  return homeElems;
+  contactElems.append(containerElem);
+  return contactElems;
 }
