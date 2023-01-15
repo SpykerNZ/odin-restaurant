@@ -1,3 +1,6 @@
+@use "./reset.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 @font-face {
   font-family: "Flower";
   src: url("../fonts/flower-webfont.woff2") format("woff2"),
@@ -6,11 +9,77 @@
   font-style: normal;
 }
 
+div {
+  border: solid 1px red;
+}
+
+html,
 body {
-  background-image: url("../images/vietnam-street.jpg");
-  background-size: 1000px;
+  height: 100vh;
+}
+
+body {
+  background: url("../images/vietnam-street.jpg") no-repeat center center fixed;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100px;
 }
 
 .header > div {
+  font-family: "Anton", sans-serif;
+  font-size: 32px;
+  color: lightblue;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .title {
   font-family: "Flower", sans-serif;
+  font-size: 128px;
+  text-align: center;
+  color: #8f5cf6;
+}
+
+.home .subtitle {
+  font-family: "Anton", sans-serif;
+  font-size: 32px;
+  color: #3b82f6;
+}
+
+.container > .home {
+  margin-top: 30px;
+}
+
+.footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  color: white;
 }
