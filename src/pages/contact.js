@@ -1,19 +1,15 @@
 export default function createContactPage() {
   const contactElems = document.createElement("div");
-  contactElems.classList.add("home");
+  contactElems.classList.add("contact");
 
-  const containerElem = document.createElement("div");
+  const jsonContactData = require("../data/contact.json");
+  console.log(jsonContactData);
+  for (let key in jsonContactData) {
+    const elem = document.createElement("p");
+    elem.classList.add(key);
+    elem.textContent = jsonContactData[key];
+    contactElems.append(elem);
+  }
 
-  const titleElem = document.createElement("p");
-  titleElem.textContent = "CONTACT";
-  titleElem.classList.add("title");
-  containerElem.append(titleElem);
-
-  const subtitleElem = document.createElement("p");
-  subtitleElem.textContent = "Vietnamse Cusine Brought to Life";
-  subtitleElem.classList.add("subtitle");
-  containerElem.append(subtitleElem);
-
-  contactElems.append(containerElem);
   return contactElems;
 }

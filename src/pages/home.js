@@ -4,13 +4,15 @@ export default function createHomePage() {
 
   const containerElem = document.createElement("div");
 
+  const jsonHomeData = require("../data/home.json");
+
   const titleElem = document.createElement("p");
-  titleElem.textContent = "Quynh's Kitchen";
+  titleElem.textContent = jsonHomeData.title;
   titleElem.classList.add("title");
   containerElem.append(titleElem);
 
   const subtitleElem = document.createElement("p");
-  subtitleElem.textContent = "Vietnamse Cusine Brought to Life";
+  subtitleElem.textContent = jsonHomeData.subtitle;
   subtitleElem.classList.add("subtitle");
   containerElem.append(subtitleElem);
 
