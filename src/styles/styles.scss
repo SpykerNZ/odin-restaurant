@@ -1,6 +1,7 @@
 @use "./reset.scss";
 
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+
 @font-face {
   font-family: "Flower";
   src: url("../fonts/flower-webfont.woff2") format("woff2"),
@@ -9,9 +10,9 @@
   font-style: normal;
 }
 
-div {
-  border: solid 1px red;
-}
+// div {
+//   border: solid 1px red;
+// }
 
 html,
 body {
@@ -42,8 +43,8 @@ body {
 }
 
 .header > div {
-  font-family: "Anton", sans-serif;
-  font-size: 32px;
+  font-family: "Playfair Display", sans-serif;
+  font-size: 24px;
   color: lightblue;
 }
 
@@ -61,16 +62,21 @@ body {
 }
 
 .home .title {
-  font-family: "Flower", sans-serif;
+  margin-top: 200px;
+  font-family: "Playfair Display", sans-serif;
   font-size: 128px;
   text-align: center;
-  color: #8f5cf6;
+  color: white;
+  padding-bottom: 40px;
+  border-bottom: solid 2px white;
 }
 
 .home .subtitle {
-  font-family: "Anton", sans-serif;
+  padding-top: 40px;
+  font-family: "Playfair Display", sans-serif;
   font-size: 32px;
-  color: #3b82f6;
+  text-align: center;
+  color: white;
 }
 
 .menu .item {

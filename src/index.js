@@ -27,3 +27,5 @@ bindContactButton(headerElems, () => setContent(contentElems, contactPage));
 container.append(headerElems);
 container.append(contentElems);
 container.append(footerElems);
+
+setContent(contentElems, homePage);
