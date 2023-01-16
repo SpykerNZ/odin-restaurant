@@ -80,13 +80,14 @@ body {
   color: white;
 }
 
-.menu > .title {
+.menu > .title,
+.contact > .title {
   color: white;
-  display: flex;
-  justify-content: center;
   font-family: "Playfair Display";
   font-size: 60px;
+  text-align: center;
   margin-top: 30px;
+  padding: 12px;
 }
 
 .menu .items {
@@ -137,8 +138,16 @@ body {
   border-radius: 60px;
 }
 
-.contact {
+.content .contact .items {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: white;
+  font-family: "Poppins";
+  font-size: 24px;
+  text-align: center;
+  gap: 12px;
 }
 
 .container > .home {
