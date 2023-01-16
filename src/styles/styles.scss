@@ -73,6 +73,34 @@ body {
   color: #3b82f6;
 }
 
+.menu .item {
+  display: grid;
+  grid-template-areas:
+    "picture title price"
+    "picture description description";
+  height: 200px;
+}
+
+.menu .title {
+  grid-area: title;
+  height: 100px;
+}
+
+.menu .description {
+  grid-area: description;
+  height: 100px;
+}
+
+.menu .price {
+  grid-area: price;
+  height: 100px;
+}
+
+.menu .picture {
+  grid-area: picture;
+  height: 100px;
+}
+
 .container > .home {
   margin-top: 30px;
 }

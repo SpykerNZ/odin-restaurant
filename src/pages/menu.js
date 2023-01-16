@@ -17,6 +17,7 @@ export default function createMenuPage() {
 
   jsonMenuData.menuItems.forEach((item) => {
     const menuItemElem = document.createElement("div");
+    menuItemElem.classList.add("item");
 
     for (let key in item.text) {
       const elem = document.createElement("p");
@@ -26,6 +27,7 @@ export default function createMenuPage() {
     }
 
     const imageElem = document.createElement("img");
+    imageElem.classList.add("picture");
     imageElem.src = menuImages[item.image];
     menuItemElem.append(imageElem);
     menuItemsElem.append(menuItemElem);
