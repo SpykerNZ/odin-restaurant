@@ -33,7 +33,6 @@ export default function createMenuPage() {
     menuItemsElem.append(menuItemElem);
   });
 
-  console.log();
   menuElems.append(menuItemsElem);
   return menuElems;
 }
