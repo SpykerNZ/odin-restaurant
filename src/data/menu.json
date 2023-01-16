@@ -2,8 +2,8 @@
   "menuItems": [
     {
       "text": {
-        "title": "Spring Rolls",
-        "description": "TODO",
+        "title": "Fried Spring Rolls",
+        "description": "These fried spring rolls are our kitchen's favorite. Made with a savory filling of pork belly, shrimp, and mixed vegetables, wrapped in a delicate rice paper wrapper and deep-fried to a crispy golden brown.",
         "price": "$19.99"
       },
       "image": "spring-rolls.jpg"
@@ -11,18 +11,18 @@
     {
       "text": {
         "title": "Pho",
-        "description": "TODO",
+        "description": "A classic Vietnamese noodle soup made with a rich and flavorful broth, made by simmering beef bones for hours. Served with your choice of tender sliced beef or chicken, and topped with a variety of fresh herbs and bean sprouts, this dish is a comforting and satisfying meal, perfect for any time of day",
         "price": "$29.99"
       },
-      "image": "spring-rolls.jpg"
+      "image": "pho.jpg"
     },
     {
       "text": {
         "title": "Banh Mi",
-        "description": "TODO",
+        "description": " A traditional Vietnamese delicacy, featuring a crisp baguette filled with a harmonious blend of succulent meats, fresh herbs, and pickled vegetables, finished with a subtle spread of mayonnaise. A symphony of flavors and textures, a perfect addition to any dining experience.",
         "price": "$25.99"
       },
-      "image": "spring-rolls.jpg"
+      "image": "banh-mi.jpg"
     }
   ]
 }

@@ -1,7 +1,6 @@
 @use "./reset.scss";
 
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins&display=swap");
 @font-face {
   font-family: "Flower";
   src: url("../fonts/flower-webfont.woff2") format("woff2"),
@@ -10,7 +9,8 @@
   font-style: normal;
 }
 
-// div {
+// div,
+// p {
 //   border: solid 1px red;
 // }
 
@@ -37,13 +37,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 80px;
   background-color: rgba(0, 0, 0, 0.7);
   height: 100px;
 }
 
 .header > div {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 24px;
   color: lightblue;
 }
@@ -79,32 +79,65 @@ body {
   color: white;
 }
 
+.menu > .title {
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-family: "Playfair Display";
+  font-size: 60px;
+  margin-top: 30px;
+}
+
+.menu .items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  margin: 16px;
+}
+
 .menu .item {
   display: grid;
   grid-template-areas:
     "picture title price"
     "picture description description";
-  height: 200px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  gap: 10px;
+  max-width: 1000px;
 }
 
-.menu .title {
+.menu .items .title {
   grid-area: title;
-  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  font-weight: bold;
 }
 
 .menu .description {
   grid-area: description;
-  height: 100px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .menu .price {
   grid-area: price;
-  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-weight: bold;
 }
 
 .menu .picture {
   grid-area: picture;
-  height: 100px;
+  object-fit: cover;
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+}
+
+.contact {
+  color: white;
 }
 
 .container > .home {

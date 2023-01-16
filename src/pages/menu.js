@@ -10,9 +10,10 @@ export default function createMenuPage() {
 
   // Add Menu Items
   const menuItemsElem = document.createElement("div");
+  menuItemsElem.classList.add("items");
   const jsonMenuData = require("../data/menu.json");
   const menuImages = importAll(
-    require.context("../images", false, /\.(png|jpe?g|svg)$/)
+    require.context("../images/menu", false, /\.(png|jpe?g|svg)$/)
   );
 
   jsonMenuData.menuItems.forEach((item) => {
