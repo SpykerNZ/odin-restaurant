@@ -20,9 +20,21 @@ const homePage = createHomePage();
 const menuPage = createMenuPage();
 const contactPage = createContactPage();
 
+function setBlackBackground() {
+  container.classList.add("black");
+}
+
+function setImageBackground() {
+  container.classList.remove("black");
+}
+
 bindHomeButton(headerElems, () => setContent(contentElems, homePage));
 bindMenuButton(headerElems, () => setContent(contentElems, menuPage));
 bindContactButton(headerElems, () => setContent(contentElems, contactPage));
+
+bindHomeButton(headerElems, setImageBackground);
+bindMenuButton(headerElems, setBlackBackground);
+bindContactButton(headerElems, setBlackBackground);
 
 container.append(headerElems);
 container.append(contentElems);

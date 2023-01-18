@@ -24,7 +24,7 @@ body {
   min-height: 100vh;
   flex-direction: column;
   justify-content: flex-start;
-  transition: all 1s linear;
+  transition: all 0.3s linear;
 }
 
 .container {
@@ -35,7 +35,7 @@ body {
 }
 
 .container.black {
-  background: black;
+  background-color: black;
 }
 
 .header {
