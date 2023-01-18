@@ -2,16 +2,22 @@
   "name": "odin-restaurant",
   "version": "1.0.0",
   "description": "",
+  "repository": {
+    "url": "git+https://github.com/SpykerNZ/odin-restaurant.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "start": "webpack serve --open"
+    "build": "webpack --mode=development",
+    "start": "webpack serve --open",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Jamie Spyker",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^6.7.3",
+    "gh-pages": "^4.0.0",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",
