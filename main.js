@@ -916,7 +916,7 @@ module.exports = JSON.parse('{"phone":"03-2262-627","email":"q@is.bananas","addr
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"title":"Quynh\'s Kitchen","subtitle":"Taste the comfort of traditional vietnamese home-cooking"}');
+module.exports = JSON.parse('{"title":"Vietnamese Kitchen","subtitle":"Taste the comfort of traditional vietnamese home-cooking"}');
 
 /***/ }),
 
